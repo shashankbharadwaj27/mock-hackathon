@@ -1,5 +1,6 @@
 package com.example.backend.exception;
 
+import lombok.extern.slf4j.Slf4j;
 import org.springframework.http.*;
 import org.springframework.web.bind.*;
 import org.springframework.web.bind.annotation.*;
@@ -7,6 +8,7 @@ import java.time.LocalDateTime;
 import java.util.*;
 
 @RestControllerAdvice
+@Slf4j
 public class GlobalExceptionHandler {
 
     // ─── 404 ────────────────────────────────────────────────────
@@ -70,6 +72,8 @@ public class GlobalExceptionHandler {
     // ─── Fallback ────────────────────────────────────────────────
     @ExceptionHandler(Exception.class)
     public ResponseEntity<ErrorResponse> handleAll(Exception ex) {
+
+        log.error("Unhandled exception occurred", ex);
         return build(HttpStatus.INTERNAL_SERVER_ERROR,
                 "An unexpected error occurred");
     }
@@ -87,3 +91,4 @@ public class GlobalExceptionHandler {
             LocalDateTime timestamp
     ) {}
 }
+

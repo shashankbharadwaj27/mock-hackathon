@@ -1,5 +1,6 @@
 package com.example.backend.dto.response.auth;
 
+import com.example.backend.entity.Role;
 import lombok.AllArgsConstructor;
 import lombok.Builder;
 import lombok.Data;
@@ -15,5 +16,5 @@ public class UserProfileResponse {
     private String name;
     private String email;
     private String phone;
-    private String role;
+    private Role role;
 }

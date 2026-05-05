@@ -1,5 +1,6 @@
 package com.example.backend.dto.response.auth;
 
+import com.example.backend.entity.Role;
 import lombok.AllArgsConstructor;
 import lombok.Builder;
 import lombok.Data;
@@ -17,5 +18,5 @@ public class AuthResponse {
     private Long userId;
     private String name;
     private String email;
-    private String role;      // USER | ADMIN
+    private Role role;      // USER | ADMIN
 }

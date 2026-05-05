@@ -39,8 +39,6 @@ public class User{
 
     private String phone;
 
-//    private String role;
-
     // One user → many orders
     @OneToMany(mappedBy = "user", cascade = CascadeType.ALL)
     private List<Order> orders;
