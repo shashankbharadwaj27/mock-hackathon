@@ -17,7 +17,7 @@ public class OrderResponse {
     private Long orderId;
     private String status;           // OrderStatus enum value
     private String deliveryAddress;
-    private BigDecimal totalAmount;
+    private Double totalAmount;
     private String paymentStatus;    // PENDING | PAID | FAILED
     private LocalDateTime placedAt;
     private List<OrderItemResponse> items; // nested

@@ -15,7 +15,7 @@ public class ProductResponse {
     private Long id;
     private String name;
     private String description;
-    private BigDecimal price;
+    private Double price;
     private String imageUrl;
     private boolean isActive;
     private CategoryResponse category; // nested
