@@ -16,6 +16,6 @@ public class OrderItemResponse {
     private Long productId;
     private String productName;
     private int quantity;
-    private BigDecimal unitPrice; // snapshot at order time
-    private BigDecimal subtotal;
+    private Double unitPrice; // snapshot at order time
+    private Double subtotal;
 }

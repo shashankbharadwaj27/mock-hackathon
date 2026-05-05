@@ -1,6 +1,6 @@
 package com.example.backend.dto.request.order;
 
-import com.pizza.model.OrderStatus;
+import com.example.backend.entity.OrderStatus;
 import jakarta.validation.constraints.*;
 import lombok.Data;
 

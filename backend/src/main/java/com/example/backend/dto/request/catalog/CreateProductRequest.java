@@ -2,7 +2,6 @@ package com.example.backend.dto.request.catalog;
 
 import jakarta.validation.constraints.*;
 import lombok.Data;
-import java.math.BigDecimal;
 
 @Data
 public class CreateProductRequest {
@@ -14,7 +13,7 @@ public class CreateProductRequest {
 
     @NotNull(message = "Price is required")
     @Positive(message = "Price must be positive")
-    private BigDecimal price;
+    private Double price;
 
     @NotNull(message = "Category is required")
     private Long categoryId; // FK → Category

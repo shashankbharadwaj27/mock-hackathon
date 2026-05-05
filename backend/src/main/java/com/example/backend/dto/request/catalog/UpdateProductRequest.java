@@ -13,7 +13,7 @@ public class UpdateProductRequest {
     private String description; // nullable
 
     @Positive(message = "Price must be positive")
-    private BigDecimal price; // nullable
+    private Double price; // nullable
 
     private Long categoryId; // nullable
 

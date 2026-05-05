@@ -2,7 +2,9 @@ package com.example.backend.entity;
 
 import jakarta.persistence.*;
 import lombok.*;
-
+import org.springframework.cglib.core.Local;
+import  com.example.backend.entity.OrderStatus;
+import java.time.LocalDateTime;
 import java.util.List;
 
 @Entity
@@ -18,13 +20,13 @@ public class Order {
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
 
-    private String status;
+    private OrderStatus status;
 
     private Double totalAmount;
 
     private String deliveryAddress;
 
-    private String placedAt;
+    private LocalDateTime placedAt;
 
     private String paymentStatus;
 

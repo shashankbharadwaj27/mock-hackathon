@@ -15,7 +15,7 @@ public class OrderSummaryResponse {
 
     private Long orderId;
     private String status;
-    private BigDecimal totalAmount;
+    private Double totalAmount;
     private int itemCount;
     private LocalDateTime placedAt;
 }

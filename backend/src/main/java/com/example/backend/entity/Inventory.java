@@ -3,6 +3,8 @@ package com.example.backend.entity;
 import jakarta.persistence.*;
 import lombok.*;
 
+import java.time.LocalDateTime;
+
 @Entity
 @Getter
 @Setter
@@ -17,7 +19,7 @@ public class Inventory {
 
     private Integer quantity;
 
-    private String updatedAt;
+    private LocalDateTime updatedAt;
 
     @OneToOne
     @JoinColumn(name = "product_id")
